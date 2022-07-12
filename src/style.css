@@ -117,7 +117,8 @@ body {
   cursor: pointer;
 }
 
-.disable-edit, .fa-trash-can {
+.disable-edit,
+.fa-trash-can {
   display: none;
 }
 
