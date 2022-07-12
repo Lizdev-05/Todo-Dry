@@ -145,13 +145,15 @@ window.addEventListener('load', () => {
 const updateStorage = () => {
   const localData = JSON.parse(localStorage.getItem('todo'));
   const allTasks = document.querySelectorAll('span');
-  for (let i = 0; i < allTasks.length; i += 1) {
-    if (allTasks[i].classList.contains('text-selected')) {
-      localData[i].completed = true;
-    } else {
-      localData[i].completed = false;
-    }
-  }
+  allTasks.forEach((i) => {
+    localData.map((i) => {
+      if (allTasks[i].classList.contains('text-selected')) {
+        localData[i].completed = true;
+      } else {
+        localData[i].completed = false;
+      }
+    });
+  });
   setStorage(localData);
 };
 
